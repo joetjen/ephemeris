@@ -27,8 +27,17 @@ either way — without two implementations that disagree.
 
 ## Status
 
-Early. The `RRULE` reader and writer are complete and round-trip exactly. The
-occurrence engine and the English syntax are in progress.
+The `RRULE` reader and writer, the English reader and writer, and the
+occurrence engine are complete: 44 tests and 13 doctests, no runtime
+dependencies.
+
+The occurrence engine supports `FREQ`, `INTERVAL`, `COUNT`, `UNTIL`, `WKST`,
+`BYSECOND`, `BYMINUTE`, `BYHOUR`, `BYDAY` including ordinals such as `-1SU`,
+`BYMONTHDAY`, `BYYEARDAY`, `BYWEEKNO`, `BYMONTH` and `BYSETPOS`.
+
+A date that does not exist in a period is skipped, not clamped, as
+RFC 5545 §3.3.10 requires: `FREQ=MONTHLY;BYMONTHDAY=31` yields 31 January and
+31 March, never 28 February.
 
 ## Scope
 
