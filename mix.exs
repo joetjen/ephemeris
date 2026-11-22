@@ -28,7 +28,16 @@ defmodule Ephemeris.MixProject do
 
   @spec cli() :: keyword()
   def cli do
-    [preferred_envs: [credo: :dev, dialyzer: :dev, docs: :docs, precommit: :dev, test: :test]]
+    [
+      preferred_envs: [
+        credo: :dev,
+        dialyzer: :dev,
+        docs: :docs,
+        "hex.publish": :docs,
+        precommit: :dev,
+        test: :test
+      ]
+    ]
   end
 
   @spec dialyzer() :: keyword()
@@ -53,7 +62,7 @@ defmodule Ephemeris.MixProject do
   @spec package() :: keyword()
   defp package do
     [
-      licenses: ["MIT"],
+      licenses: ["Apache-2.0"],
       links: %{"GitHub" => @source_url, "Docs" => "https://joetjen.github.io/ephemeris"},
       files: ~w(lib .formatter.exs mix.exs README.md CHANGELOG.md LICENSE)
     ]
