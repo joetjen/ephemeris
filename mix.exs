@@ -55,7 +55,7 @@ defmodule Ephemeris.MixProject do
     [
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url, "Docs" => "https://joetjen.github.io/ephemeris"},
-      files: ~w(lib guides .formatter.exs mix.exs README.md CHANGELOG.md LICENSE)
+      files: ~w(lib .formatter.exs mix.exs README.md CHANGELOG.md LICENSE)
     ]
   end
 
