@@ -28,7 +28,16 @@ defmodule Ephemeris.MixProject do
 
   @spec cli() :: keyword()
   def cli do
-    [preferred_envs: [credo: :dev, dialyzer: :dev, docs: :docs, precommit: :dev, test: :test]]
+    [
+      preferred_envs: [
+        credo: :dev,
+        dialyzer: :dev,
+        docs: :docs,
+        "hex.publish": :docs,
+        precommit: :dev,
+        test: :test
+      ]
+    ]
   end
 
   @spec dialyzer() :: keyword()
