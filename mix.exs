@@ -53,7 +53,7 @@ defmodule Ephemeris.MixProject do
   @spec package() :: keyword()
   defp package do
     [
-      licenses: ["MIT"],
+      licenses: ["Apache-2.0"],
       links: %{"GitHub" => @source_url, "Docs" => "https://joetjen.github.io/ephemeris"},
       files: ~w(lib .formatter.exs mix.exs README.md CHANGELOG.md LICENSE)
     ]

@@ -47,4 +47,4 @@ reference `DateTime`. Scheduling belongs to whatever uses this.
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+Apache-2.0. See [LICENSE](LICENSE).
